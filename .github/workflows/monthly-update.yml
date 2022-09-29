@@ -2,7 +2,12 @@
 name: 'Monthly Update Action'
 
 on:
-  workflow_dispatch:
+  workflow_dispatch:  
+  push:
+    branches: 
+      - master
+  watch:
+    types: started
   schedule:
     - cron: '0 0 1/15 * *'
 
