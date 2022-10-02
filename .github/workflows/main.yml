@@ -1,7 +1,11 @@
 name: ClockIn
 
 on:
-  workflow_dispatch:
+  push:
+    branches: 
+      - master
+  watch:
+    types: started
   schedule:
     - cron: 0 10/12 * * *
 
